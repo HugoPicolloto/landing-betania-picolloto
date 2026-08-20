@@ -103,6 +103,7 @@ a { text-decoration: none; }
   font-family: 'Playfair Display', serif;
   font-weight: 700; font-size: 1.2rem; color: var(--cor-primaria);
 }
+.logo img { max-height: 46px; width: auto; }
 .logo .logo-marca { font-family: 'Poppins', sans-serif; font-size: 0.8rem; color: var(--cor-texto-claro); font-weight: 400; }
 
 .header-cta { display: flex; gap: 16px; align-items: center; }
@@ -118,11 +119,16 @@ a { text-decoration: none; }
   overflow: hidden;
 }
 .hero::after {
-  content: "❀";
+  content: "";
   position: absolute;
-  right: -40px; bottom: -80px;
-  font-size: 320px;
-  color: rgba(43, 43, 43, 0.05);
+  right: -50px; bottom: -90px;
+  width: 340px;
+  height: 340px;
+  background-image: url("logo-betania.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.06;
   transform: rotate(-15deg);
 }
 .hero .container { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px; }
@@ -432,8 +438,7 @@ a { text-decoration: none; }
 <header class="header">
   <div class="container">
     <a class="logo" href="#inicio">
-       Betania Picolloto
-      <span class="logo-marca">Penteadista</span>
+      <img src="logo-betania.jpeg" alt="Betania Picolloto">
     </a>
     <div class="header-cta">
       <a class="btn btn-comprar btn-header btn-compra" href="#oferta">Quero participar</a>
@@ -674,7 +679,7 @@ a { text-decoration: none; }
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container">
-    <a class="logo" href="#inicio">❀ Betania Picolloto</a>
+    <a class="logo" href="#inicio"><img src="logo-betania.jpeg" alt="Betania Picolloto"></a>
     <div class="footer-links">
       <a href="#">Termos de Uso</a>
       <a href="#">Política de Privacidade</a>
