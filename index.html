@@ -274,17 +274,28 @@ a { text-decoration: none; }
    SEÇÃO MÓDULOS / AULAS
 ============================================================ */
 .modulos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.modulo {
-  background: var(--cor-branco);
-  border: 1px solid #e5e5e5;
-  border-radius: var(--raio);
-  padding: 30px 26px;
-  box-shadow: var(--sombra);
-  transition: transform .25s, box-shadow .25s;
-  position: relative;
+
+/* Layout de etapas em linhas intercaladas (texto + foto) */
+.etapas { display: grid; gap: 70px; }
+.etapa-linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
-.modulo:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(43, 43, 43, 0.12); }
-.modulo .num {
+.etapa-linha.invertida .etapa-foto { order: -1; }
+.etapa-foto {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.etapa-foto img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: linear-gradient(135deg, #e0d8d0, #c9bfb4);
+}
+.etapa-linha .num {
   font-family: 'Playfair Display', serif;
   font-size: 0.95rem;
   color: var(--cor-primaria);
@@ -292,13 +303,18 @@ a { text-decoration: none; }
   background: var(--cor-destaque);
   padding: 5px 14px; border-radius: 50px;
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
-.modulo h3 { font-size: 1.3rem; margin-bottom: 12px; }
-.modulo p { color: var(--cor-texto-claro); font-size: 0.95rem; margin-bottom: 16px; }
-.modulo ul { list-style: none; display: grid; gap: 8px; }
-.modulo ul li { font-size: 0.9rem; display: flex; gap: 8px; }
-.modulo ul li::before { content: "✔"; color: var(--cor-secundaria); font-weight: 700; }
+.etapa-linha h3 { font-size: 1.6rem; margin-bottom: 12px; }
+.etapa-linha p { color: var(--cor-texto-claro); margin-bottom: 16px; }
+.etapa-linha ul { list-style: none; display: grid; gap: 9px; }
+.etapa-linha ul li { font-size: 0.98rem; display: flex; gap: 9px; }
+.etapa-linha ul li::before { content: "✔"; color: var(--cor-secundaria); font-weight: 700; }
+@media (max-width: 900px) {
+  .etapa-linha { grid-template-columns: 1fr; gap: 24px; }
+  .etapa-linha.invertida .etapa-foto { order: 0; }
+  .etapas { gap: 44px; }
+}
 
 /* ============================================================
    PARA QUEM É
@@ -540,38 +556,56 @@ a { text-decoration: none; }
       <p>Conteúdo direto ao ponto, sem enrolação, para você aplicar no mesmo dia.</p>
     </div>
 
-    <div class="modulos-grid">
-      <div class="modulo">
-        <span class="num">Etapa 01</span>
-        <h3>Preparo e estrutura</h3>
-        <p>Base perfeita para uma trança firme, alinhada e que dura o dia inteiro.</p>
-        <ul>
-          <li>Preparação correta do cabelo antes de trançar</li>
-          <li>Divisão de mechas proporcional e alinhada</li>
-          <li>Escolha dos produtos e utensílios certos</li>
-        </ul>
+    <div class="etapas">
+      <div class="etapa-linha">
+        <div class="etapa-texto">
+          <span class="num">Etapa 01</span>
+          <h3>Preparo e estrutura</h3>
+          <p>Base perfeita para uma trança firme, alinhada e que dura o dia inteiro.</p>
+          <ul>
+            <li>Preparação correta do cabelo antes de trançar</li>
+            <li>Divisão de mechas proporcional e alinhada</li>
+            <li>Escolha dos produtos e utensílios certos</li>
+          </ul>
+        </div>
+        <div class="etapa-foto">
+          <!-- TROQUE AQUI: foto da Etapa 01 -->
+          <img src="etapa1.jpg" alt="Etapa 01 - Preparo e estrutura">
+        </div>
       </div>
 
-      <div class="modulo">
-        <span class="num">Etapa 02</span>
-        <h3>Técnica da Trança 4D passo a passo</h3>
-        <p>A execução completa da Trança 4D, ensinada de forma simples e didática.</p>
-        <ul>
-          <li>Posição correta das mãos e do corpo</li>
-          <li>Passo a passo da trança embutida na raiz</li>
-          <li>Manutenção da tensão para um acabamento uniforme</li>
-        </ul>
+      <div class="etapa-linha invertida">
+        <div class="etapa-texto">
+          <span class="num">Etapa 02</span>
+          <h3>Técnica da Trança 4D passo a passo</h3>
+          <p>A execução completa da Trança 4D, ensinada de forma simples e didática.</p>
+          <ul>
+            <li>Posição correta das mãos e do corpo</li>
+            <li>Passo a passo da trança embutida na raiz</li>
+            <li>Manutenção da tensão para um acabamento uniforme</li>
+          </ul>
+        </div>
+        <div class="etapa-foto">
+          <!-- TROQUE AQUI: foto da Etapa 02 -->
+          <img src="etapa2.jpg" alt="Etapa 02 - Técnica da Trança 4D">
+        </div>
       </div>
 
-      <div class="modulo">
-        <span class="num">Etapa 03</span>
-        <h3>Acabamento profissional</h3>
-        <p>Os detalhes que transformam uma trança simples em um trabalho profissional.</p>
-        <ul>
-          <li>Finalização e fixação duradoura</li>
-          <li>Correções de falhas e imperfeições</li>
-          <li>Acabamento final com visual de salão</li>
-        </ul>
+      <div class="etapa-linha">
+        <div class="etapa-texto">
+          <span class="num">Etapa 03</span>
+          <h3>Acabamento profissional</h3>
+          <p>Os detalhes que transformam uma trança simples em um trabalho profissional.</p>
+          <ul>
+            <li>Finalização e fixação duradoura</li>
+            <li>Correções de falhas e imperfeições</li>
+            <li>Acabamento final com visual de salão</li>
+          </ul>
+        </div>
+        <div class="etapa-foto">
+          <!-- TROQUE AQUI: foto da Etapa 03 -->
+          <img src="etapa3.jpg" alt="Etapa 03 - Acabamento profissional">
+        </div>
       </div>
     </div>
   </div>
