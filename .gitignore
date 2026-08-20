@@ -9,3 +9,7 @@ desktop.ini
 # Pasta de build (se usar alguma)
 dist/
 node_modules/
+
+# Credenciais do YouTube (NUNCA subir para o GitHub)
+client_secret.json
+youtube_token.json
