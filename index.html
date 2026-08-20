@@ -124,23 +124,26 @@ a { text-decoration: none; }
   padding: 34px 0 60px;
   overflow: hidden;
 }
-/* Camada de cima: textura de parede com relevo */
+/* Camada de cima: textura de parede com relevo (acabamento gesso/estuque) */
 .hero::before {
   content: "";
   position: absolute;
   left: 0; right: 0; top: 0;
   height: 55%;
-  background-color: #e5e0dc;
+  background-color: #eae4df;
   background-image:
-    radial-gradient(circle at 15% 30%, rgba(107, 66, 38, 0.08) 0, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(107, 66, 38, 0.06) 0, transparent 45%),
-    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.55) 0, transparent 50%),
-    radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.45) 0, transparent 45%),
-    radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.04) 0, transparent 50%),
-    radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 0.03) 0, transparent 50%);
-  background-size: 340px 340px, 420px 420px, 300px 300px, 380px 380px, 460px 460px, 500px 500px;
-  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
-  box-shadow: inset 0 -14px 26px -18px rgba(0, 0, 0, 0.28);
+    /* relevo amplo: luzes e sombras difusas */
+    radial-gradient(120% 90% at 12% 8%, rgba(255, 255, 255, 0.55) 0%, transparent 55%),
+    radial-gradient(90% 80% at 88% 18%, rgba(107, 66, 38, 0.05) 0%, transparent 60%),
+    radial-gradient(70% 70% at 60% 92%, rgba(255, 255, 255, 0.4) 0%, transparent 55%),
+    radial-gradient(60% 60% at 30% 75%, rgba(107, 66, 38, 0.04) 0%, transparent 55%),
+    radial-gradient(50% 50% at 75% 45%, rgba(0, 0, 0, 0.035) 0%, transparent 50%),
+    /* micro-textura de gesso */
+    radial-gradient(rgba(107, 66, 38, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 9px 9px, 9px 9px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 4.5px 4.5px;
+  box-shadow: inset 0 -18px 30px -20px rgba(0, 0, 0, 0.30), inset 0 2px 4px rgba(255, 255, 255, 0.5);
   pointer-events: none;
   z-index: 1;
 }
@@ -621,8 +624,8 @@ a { text-decoration: none; }
         </div>
         <p>Penteadista apaixonada pela arte de transformar cabelos. Há mais de 8 anos criando trabalhos para noivas e eventos, Betania une técnica e sensibilidade para entregar penteados comerciais que encantam e duram.</p>
         <ul class="sobre-lista">
-          <li>Penteadista há mais de 8 anos, especialista em noivas e penteados comerciais</li>
-          <li>Anos de experiência com clientes reais</li>
+          <li>Penteadista há mais de 8 anos</li>
+          <li>Especialista em noivas e penteados comerciais</li>
           <li>Trabalhos feitos com capricho e acabamento profissional</li>
           <li>Ensina com didática simples, passo a passo</li>
         </ul>
