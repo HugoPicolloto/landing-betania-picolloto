@@ -212,12 +212,16 @@ a { text-decoration: none; }
 ============================================================ */
 .video-wrapper {
   position: relative;
-  max-width: 860px;
+  max-width: 440px;
   margin: 0 auto;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--sombra);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
+  background: #000;
+}
+@media (max-width: 767px) {
+  .video-wrapper { max-width: 100%; }
 }
 .video-placeholder {
   position: relative;
