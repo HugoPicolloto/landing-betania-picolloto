@@ -16,15 +16,15 @@
    ESTILO GLOBAL
 ============================================================ */
 :root {
-  --cor-primaria: #c2185b;        /* rosa forte */
-  --cor-secundaria: #e91e63;      /* rosa */
-  --cor-destaque: #ffd7e8;        /* rosa claro */
-  --cor-fundo-claro: #fff5f8;     /* fundo rosé */
-  --cor-texto: #3b2330;
-  --cor-texto-claro: #6d4a58;
+  --cor-primaria: #6b4226;        /* marrom terroso */
+  --cor-secundaria: #8a5a34;      /* marrom claro */
+  --cor-destaque: #f0e6dc;        /* bege claro */
+  --cor-fundo-claro: #f4f4f4;     /* fundo cinza claro */
+  --cor-texto: #2b2b2b;
+  --cor-texto-claro: #6f6f6f;
   --cor-ouro: #b8860b;
   --cor-branco: #ffffff;
-  --sombra: 0 10px 30px rgba(194, 24, 91, 0.12);
+  --sombra: 0 10px 30px rgba(43, 43, 43, 0.10);
   --raio: 16px;
 }
 
@@ -66,11 +66,11 @@ a { text-decoration: none; }
 .btn-comprar {
   background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
   color: var(--cor-branco);
-  box-shadow: 0 12px 30px rgba(194, 24, 91, 0.35);
+  box-shadow: 0 12px 30px rgba(107, 66, 38, 0.35);
   animation: pulsar 2s infinite;
 }
 
-.btn-comprar:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(194, 24, 91, 0.45); }
+.btn-comprar:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(107, 66, 38, 0.45); }
 
 .btn-branco {
   background: var(--cor-branco);
@@ -80,8 +80,8 @@ a { text-decoration: none; }
 .btn-branco:hover { transform: translateY(-3px); }
 
 @keyframes pulsar {
-  0%, 100% { box-shadow: 0 12px 30px rgba(194, 24, 91, 0.35); }
-  50% { box-shadow: 0 12px 44px rgba(194, 24, 91, 0.6); }
+  0%, 100% { box-shadow: 0 12px 30px rgba(107, 66, 38, 0.35); }
+  50% { box-shadow: 0 12px 44px rgba(107, 66, 38, 0.6); }
 }
 
 /* ============================================================
@@ -93,7 +93,7 @@ a { text-decoration: none; }
   z-index: 100;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid #f3d9e2;
+  border-bottom: 1px solid #e5e5e5;
   padding: 12px 0;
 }
 .header .container { display: flex; align-items: center; justify-content: space-between; }
@@ -113,7 +113,7 @@ a { text-decoration: none; }
 ============================================================ */
 .hero {
   position: relative;
-  background: linear-gradient(160deg, #fff0f5 0%, #ffe0ec 45%, #ffcfe0 100%);
+  background: linear-gradient(160deg, #f8f8f8 0%, #efefef 45%, #e6e6e6 100%);
   padding: 70px 0 90px;
   overflow: hidden;
 }
@@ -122,7 +122,7 @@ a { text-decoration: none; }
   position: absolute;
   right: -40px; bottom: -80px;
   font-size: 320px;
-  color: rgba(194, 24, 91, 0.07);
+  color: rgba(43, 43, 43, 0.05);
   transform: rotate(-15deg);
 }
 .hero .container { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
@@ -155,11 +155,11 @@ a { text-decoration: none; }
 }
 .hero-img .img-principal {
   border-radius: 28px;
-  box-shadow: 0 24px 60px rgba(194, 24, 91, 0.25);
+  box-shadow: 0 24px 60px rgba(43, 43, 43, 0.18);
   aspect-ratio: 4 / 5;
   object-fit: cover;
   width: 100%;
-  background: linear-gradient(135deg, #ffc1d5, #ff8fb3);
+  background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
 }
 .hero-img .selo {
   position: absolute;
@@ -170,7 +170,7 @@ a { text-decoration: none; }
   border-radius: 50%;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(194,24,91,.4);
+  box-shadow: 0 10px 30px rgba(107, 66, 38, 0.4);
   transform: rotate(8deg);
   font-size: 0.72rem; font-weight: 600; line-height: 1.3;
 }
@@ -179,7 +179,7 @@ a { text-decoration: none; }
 /* ============================================================
    CONTADOR
 ============================================================ */
-.contador-secao { background: var(--cor-primaria); color: var(--cor-branco); padding: 26px 0; }
+.contador-secao { background: #2b2b2b; color: var(--cor-branco); padding: 26px 0; }
 .contador-secao .container { display: flex; align-items: center; justify-content: center; gap: 26px; flex-wrap: wrap; text-align: center; }
 .contador-titulo { font-size: 0.95rem; font-weight: 600; max-width: 240px; }
 .contador-numeros { display: flex; gap: 18px; }
@@ -204,7 +204,7 @@ a { text-decoration: none; }
   margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px;
 }
 
-.fundo-rosa { background: var(--cor-fundo-claro); }
+.fundo-claro { background: var(--cor-fundo-claro); }
 .fundo-branco { background: var(--cor-branco); }
 
 /* ============================================================
@@ -220,7 +220,7 @@ a { text-decoration: none; }
 .video-placeholder {
   position: relative;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #ff8fb3, #c2185b);
+  background: linear-gradient(135deg, #6b4226, #8a5a34);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
   color: var(--cor-branco);
   text-align: center;
@@ -242,14 +242,14 @@ a { text-decoration: none; }
 .modulos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .modulo {
   background: var(--cor-branco);
-  border: 1px solid #f3d9e2;
+  border: 1px solid #e5e5e5;
   border-radius: var(--raio);
   padding: 30px 26px;
   box-shadow: var(--sombra);
   transition: transform .25s, box-shadow .25s;
   position: relative;
 }
-.modulo:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(194,24,91,.16); }
+.modulo:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(43, 43, 43, 0.12); }
 .modulo .num {
   font-family: 'Playfair Display', serif;
   font-size: 0.95rem;
@@ -295,7 +295,7 @@ a { text-decoration: none; }
   aspect-ratio: 3 / 4;
   object-fit: cover;
   width: 100%;
-  background: linear-gradient(135deg, #ffc1d5, #ff8fb3);
+  background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
 }
 .sobre-texto h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 16px; }
 .sobre-texto h2 span { color: var(--cor-primaria); font-style: italic; }
@@ -344,7 +344,7 @@ a { text-decoration: none; }
 .oferta-card {
   max-width: 720px;
   margin: 0 auto;
-  background: linear-gradient(150deg, #fff0f5, #ffe0ec);
+  background: linear-gradient(150deg, #f7f7f7, #ececec);
   border-radius: 26px;
   padding: 48px 40px;
   box-shadow: var(--sombra);
@@ -379,7 +379,7 @@ a { text-decoration: none; }
 .faq { max-width: 760px; margin: 0 auto; }
 .faq-item {
   background: var(--cor-branco);
-  border: 1px solid #f3d9e2;
+  border: 1px solid #e5e5e5;
   border-radius: 14px;
   margin-bottom: 14px;
   overflow: hidden;
@@ -405,10 +405,10 @@ a { text-decoration: none; }
 /* ============================================================
    FOOTER
 ============================================================ */
-.footer { background: #2b1620; color: #ecc6d5; padding: 44px 0 26px; text-align: center; }
+.footer { background: #2b2b2b; color: #d6d6d6; padding: 44px 0 26px; text-align: center; }
 .footer .logo { justify-content: center; margin-bottom: 16px; color: var(--cor-branco); }
 .footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin: 16px 0; }
-.footer-links a { color: #ecc6d5; font-size: 0.9rem; }
+.footer-links a { color: #d6d6d6; font-size: 0.9rem; }
 .footer-links a:hover { text-decoration: underline; }
 .footer .copy { font-size: 0.85rem; opacity: .8; margin-top: 12px; }
 .footer .creditos { font-size: 0.75rem; opacity: .6; margin-top: 8px; }
@@ -420,7 +420,7 @@ a { text-decoration: none; }
   position: fixed;
   bottom: 0; left: 0; right: 0;
   background: var(--cor-branco);
-  border-top: 1px solid #f3d9e2;
+  border-top: 1px solid #e5e5e5;
   padding: 12px 16px;
   display: none;
   justify-content: space-between; align-items: center; gap: 14px;
@@ -543,7 +543,7 @@ a { text-decoration: none; }
 </section>
 
 <!-- ================= MÓDULOS / O QUE VAI APRENDER ================= -->
-<section class="secao fundo-rosa">
+<section class="secao fundo-claro">
   <div class="container">
     <div class="secao-titulo">
       <span class="etiqueta">Conteúdo do curso</span>
@@ -621,7 +621,7 @@ a { text-decoration: none; }
 </section>
 
 <!-- ================= SOBRE A MENTORA ================= -->
-<section class="secao fundo-rosa">
+<section class="secao fundo-claro">
   <div class="container">
     <div class="sobre-grid">
       <div class="sobre-foto">
@@ -685,7 +685,7 @@ a { text-decoration: none; }
 </section>
 
 <!-- ================= OFERTA ================= -->
-<section class="secao fundo-rosa oferta" id="oferta">
+<section class="secao fundo-claro oferta" id="oferta">
   <div class="container">
     <div class="oferta-card">
       <div class="selo-garantia"><b>7</b> dias de garantia</div>
