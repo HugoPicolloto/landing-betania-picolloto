@@ -19,7 +19,8 @@
   --cor-primaria: #6b4226;        /* marrom terroso */
   --cor-secundaria: #8a5a34;      /* marrom claro */
   --cor-destaque: #f0e6dc;        /* bege claro */
-  --cor-fundo-claro: #f4f4f4;     /* fundo cinza claro */
+  --cor-nude: #f2e4d8;            /* nude claro */
+  --cor-fundo-claro: #f7f0e9;     /* fundo nude claro */
   --cor-texto: #2b2b2b;
   --cor-texto-claro: #6f6f6f;
   --cor-ouro: #b8860b;
@@ -119,27 +120,27 @@ a { text-decoration: none; }
 ============================================================ */
 .hero {
   position: relative;
-  background: linear-gradient(165deg, #fbfbfb 0%, #f4f4f4 50%, #ececec 100%);
+  background: linear-gradient(165deg, var(--cor-nude) 0%, #f6ece1 55%, #efe2d3 100%);
   padding: 34px 0 60px;
   overflow: hidden;
 }
-/* Camada de baixo: textura de parede com relevo */
+/* Camada de cima: textura de parede com relevo */
 .hero::before {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: 0;
+  left: 0; right: 0; top: 0;
   height: 55%;
-  background-color: #e9e9e9;
+  background-color: #e5e0dc;
   background-image:
-    radial-gradient(circle at 15% 30%, rgba(107, 66, 38, 0.07) 0, transparent 40%),
+    radial-gradient(circle at 15% 30%, rgba(107, 66, 38, 0.08) 0, transparent 40%),
     radial-gradient(circle at 85% 60%, rgba(107, 66, 38, 0.06) 0, transparent 45%),
     radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.55) 0, transparent 50%),
     radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.45) 0, transparent 45%),
-    radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.035) 0, transparent 50%),
+    radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.04) 0, transparent 50%),
     radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 0.03) 0, transparent 50%);
   background-size: 340px 340px, 420px 420px, 300px 300px, 380px 380px, 460px 460px, 500px 500px;
   background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
-  box-shadow: inset 0 14px 26px -18px rgba(0, 0, 0, 0.28);
+  box-shadow: inset 0 -14px 26px -18px rgba(0, 0, 0, 0.28);
   pointer-events: none;
   z-index: 1;
 }
