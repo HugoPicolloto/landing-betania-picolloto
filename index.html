@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curso Trança Perfeita | Betania Picolloto</title>
+<meta name="description" content="Aprenda a fazer tranças profissionais do zero ao avançado com a penteadista Betania Picolloto. Acesso por 3 meses.">
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   ESTILO GLOBAL
+============================================================ */
+:root {
+  --cor-primaria: #c2185b;        /* rosa forte */
+  --cor-secundaria: #e91e63;      /* rosa */
+  --cor-destaque: #ffd7e8;        /* rosa claro */
+  --cor-fundo-claro: #fff5f8;     /* fundo rosé */
+  --cor-texto: #3b2330;
+  --cor-texto-claro: #6d4a58;
+  --cor-ouro: #b8860b;
+  --cor-branco: #ffffff;
+  --sombra: 0 10px 30px rgba(194, 24, 91, 0.12);
+  --raio: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cor-texto);
+  background: var(--cor-branco);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+
+.container { width: min(1140px, 92%); margin: 0 auto; }
+
+/* ============================================================
+   BOTÕES
+============================================================ */
+.btn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-comprar {
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+  color: var(--cor-branco);
+  box-shadow: 0 12px 30px rgba(194, 24, 91, 0.35);
+  animation: pulsar 2s infinite;
+}
+
+.btn-comprar:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(194, 24, 91, 0.45); }
+
+.btn-branco {
+  background: var(--cor-branco);
+  color: var(--cor-primaria);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.btn-branco:hover { transform: translateY(-3px); }
+
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 12px 30px rgba(194, 24, 91, 0.35); }
+  50% { box-shadow: 0 12px 44px rgba(194, 24, 91, 0.6); }
+}
+
+/* ============================================================
+   HEADER
+============================================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f3d9e2;
+  padding: 12px 0;
+}
+.header .container { display: flex; align-items: center; justify-content: space-between; }
+
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; font-size: 1.2rem; color: var(--cor-primaria);
+}
+.logo .logo-marca { font-family: 'Poppins', sans-serif; font-size: 0.8rem; color: var(--cor-texto-claro); font-weight: 400; }
+
+.header-cta { display: flex; gap: 16px; align-items: center; }
+.btn-header { padding: 10px 22px; font-size: 0.9rem; }
+
+/* ============================================================
+   HERO
+============================================================ */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, #fff0f5 0%, #ffe0ec 45%, #ffcfe0 100%);
+  padding: 70px 0 90px;
+  overflow: hidden;
+}
+.hero::after {
+  content: "❀";
+  position: absolute;
+  right: -40px; bottom: -80px;
+  font-size: 320px;
+  color: rgba(194, 24, 91, 0.07);
+  transform: rotate(-15deg);
+}
+.hero .container { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 50px; align-items: center; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--cor-branco);
+  color: var(--cor-primaria);
+  font-size: 0.85rem; font-weight: 600;
+  padding: 8px 16px; border-radius: 50px;
+  box-shadow: var(--sombra);
+  margin-bottom: 20px;
+}
+.hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 18px; }
+.hero h1 span { color: var(--cor-primaria); font-style: italic; }
+
+.hero p.hero-sub { font-size: 1.1rem; color: var(--cor-texto-claro); max-width: 520px; margin-bottom: 28px; }
+
+.hero-bullets { list-style: none; margin-bottom: 30px; display: grid; gap: 10px; }
+.hero-bullets li { display: flex; gap: 10px; align-items: center; font-size: 0.98rem; }
+.hero-bullets li::before { content: "✦"; color: var(--cor-primaria); font-weight: 700; }
+
+.hero-preco { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+.preco-antigo { color: var(--cor-texto-claro); text-decoration: line-through; font-size: 1.1rem; }
+.preco-atual { font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--cor-primaria); }
+.preco-acesso { font-size: 0.85rem; color: var(--cor-texto-claro); }
+
+.hero-img {
+  position: relative;
+}
+.hero-img .img-principal {
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(194, 24, 91, 0.25);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+  background: linear-gradient(135deg, #ffc1d5, #ff8fb3);
+}
+.hero-img .selo {
+  position: absolute;
+  top: -18px; right: -14px;
+  background: var(--cor-primaria);
+  color: var(--cor-branco);
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(194,24,91,.4);
+  transform: rotate(8deg);
+  font-size: 0.72rem; font-weight: 600; line-height: 1.3;
+}
+.selo b { font-family: 'Playfair Display', serif; font-size: 1.5rem; display: block; }
+
+/* ============================================================
+   CONTADOR
+============================================================ */
+.contador-secao { background: var(--cor-primaria); color: var(--cor-branco); padding: 26px 0; }
+.contador-secao .container { display: flex; align-items: center; justify-content: center; gap: 26px; flex-wrap: wrap; text-align: center; }
+.contador-titulo { font-size: 0.95rem; font-weight: 600; max-width: 240px; }
+.contador-numeros { display: flex; gap: 18px; }
+.contador-item { background: rgba(255,255,255,0.15); border-radius: 12px; padding: 10px 16px; min-width: 72px; }
+.contador-item b { display: block; font-size: 1.7rem; font-family: 'Playfair Display', serif; }
+.contador-item span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: .9; }
+
+/* ============================================================
+   SEÇÕES GENÉRICAS
+============================================================ */
+.secao { padding: 80px 0; }
+.secao-titulo { text-align: center; max-width: 720px; margin: 0 auto 50px; }
+.secao-titulo h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); margin-bottom: 14px; }
+.secao-titulo h2 span { color: var(--cor-primaria); font-style: italic; }
+.secao-titulo p { color: var(--cor-texto-claro); }
+.secao-titulo .etiqueta {
+  display: inline-block;
+  background: var(--cor-destaque);
+  color: var(--cor-primaria);
+  font-size: 0.8rem; font-weight: 600;
+  padding: 6px 16px; border-radius: 50px;
+  margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px;
+}
+
+.fundo-rosa { background: var(--cor-fundo-claro); }
+.fundo-branco { background: var(--cor-branco); }
+
+/* ============================================================
+   SEÇÃO VÍDEO
+============================================================ */
+.video-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.video-placeholder {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #ff8fb3, #c2185b);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  color: var(--cor-branco);
+  text-align: center;
+}
+.video-placeholder .play {
+  width: 84px; height: 84px; border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: 2px solid rgba(255,255,255,0.7);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  animation: pulsar 2s infinite;
+}
+.video-placeholder p { font-size: 1.05rem; font-weight: 500; padding: 0 20px; }
+.video-placeholder small { opacity: .85; }
+
+/* ============================================================
+   SEÇÃO MÓDULOS / AULAS
+============================================================ */
+.modulos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.modulo {
+  background: var(--cor-branco);
+  border: 1px solid #f3d9e2;
+  border-radius: var(--raio);
+  padding: 30px 26px;
+  box-shadow: var(--sombra);
+  transition: transform .25s, box-shadow .25s;
+  position: relative;
+}
+.modulo:hover { transform: translateY(-6px); box-shadow: 0 18px 44px rgba(194,24,91,.16); }
+.modulo .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  background: var(--cor-destaque);
+  padding: 5px 14px; border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.modulo h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.modulo p { color: var(--cor-texto-claro); font-size: 0.95rem; margin-bottom: 16px; }
+.modulo ul { list-style: none; display: grid; gap: 8px; }
+.modulo ul li { font-size: 0.9rem; display: flex; gap: 8px; }
+.modulo ul li::before { content: "✔"; color: var(--cor-secundaria); font-weight: 700; }
+
+/* ============================================================
+   PARA QUEM É
+============================================================ */
+.quem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+.quem-card {
+  background: var(--cor-branco);
+  border-radius: var(--raio);
+  padding: 32px 30px;
+  box-shadow: var(--sombra);
+  border-left: 5px solid var(--cor-primaria);
+}
+.quem-card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--cor-primaria); }
+.quem-card ul { list-style: none; display: grid; gap: 9px; }
+.quem-card ul li { font-size: 0.95rem; color: var(--cor-texto-claro); display: flex; gap: 8px; }
+.quem-card ul li::before { content: "✦"; color: var(--cor-secundaria); }
+
+/* ============================================================
+   SOBRE A MENTORA
+============================================================ */
+.sobre-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; align-items: center; }
+.sobre-foto {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.sobre-foto img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  width: 100%;
+  background: linear-gradient(135deg, #ffc1d5, #ff8fb3);
+}
+.sobre-texto h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 16px; }
+.sobre-texto h2 span { color: var(--cor-primaria); font-style: italic; }
+.sobre-texto p { color: var(--cor-texto-claro); margin-bottom: 16px; }
+.sobre-lista { list-style: none; display: grid; gap: 10px; margin: 20px 0; }
+.sobre-lista li { display: flex; gap: 10px; font-size: 0.98rem; }
+.sobre-lista li::before { content: "★"; color: var(--cor-ouro); }
+.sobre-cita {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+  border-left: 4px solid var(--cor-primaria);
+  padding-left: 16px;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   PROVA SOCIAL / DEPOIMENTOS
+============================================================ */
+.depoimentos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.depoimento {
+  background: var(--cor-branco);
+  border-radius: var(--raio);
+  padding: 28px 24px;
+  box-shadow: var(--sombra);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.depoimento .estrelas { color: var(--cor-ouro); letter-spacing: 3px; }
+.depoimento p { font-size: 0.95rem; color: var(--cor-texto); font-style: italic; }
+.depoimento .autor { display: flex; align-items: center; gap: 12px; }
+.depoimento .avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+  color: var(--cor-branco);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 1rem;
+}
+.depoimento .autor b { display: block; font-size: 0.92rem; }
+.depoimento .autor span { font-size: 0.8rem; color: var(--cor-texto-claro); }
+
+/* ============================================================
+   GARANTIA / OFERTA
+============================================================ */
+.oferta { text-align: center; }
+.oferta-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: linear-gradient(150deg, #fff0f5, #ffe0ec);
+  border-radius: 26px;
+  padding: 48px 40px;
+  box-shadow: var(--sombra);
+  position: relative;
+}
+.oferta-card .selo-garantia {
+  position: absolute;
+  top: -32px; left: 50%; transform: translateX(-50%);
+  background: #2e7d32;
+  color: var(--cor-branco);
+  border-radius: 50%;
+  width: 96px; height: 96px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; font-weight: 700; font-size: 0.7rem;
+  box-shadow: 0 10px 30px rgba(46,125,50,.4);
+}
+.selo-garantia b { font-family: 'Playfair Display', serif; font-size: 1.3rem; display: block; }
+.oferta-card h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 12px; }
+.oferta-card h2 span { color: var(--cor-primaria); }
+.oferta-lista { list-style: none; display: grid; gap: 10px; margin: 22px 0; text-align: left; max-width: 460px; margin-left: auto; margin-right: auto; }
+.oferta-lista li { display: flex; gap: 10px; font-size: 0.98rem; }
+.oferta-lista li::before { content: "✔"; color: var(--cor-primaria); font-weight: 700; }
+.oferta-preco { margin: 24px 0 20px; }
+.oferta-preco .antigo { text-decoration: line-through; color: var(--cor-texto-claro); }
+.oferta-preco .atual { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 700; color: var(--cor-primaria); }
+.oferta-preco .acesso { font-size: 0.85rem; color: var(--cor-texto-claro); }
+.oferta-pagamentos { margin-top: 18px; font-size: 0.8rem; color: var(--cor-texto-claro); display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: var(--cor-branco);
+  border: 1px solid #f3d9e2;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.faq-pergunta {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 18px 22px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.faq-pergunta::after { content: "＋"; font-size: 1.4rem; color: var(--cor-primaria); transition: transform .3s; }
+.faq-item.aberto .faq-pergunta::after { transform: rotate(45deg); }
+.faq-resposta { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+.faq-resposta p { padding: 0 22px 20px; color: var(--cor-texto-claro); font-size: 0.95rem; }
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.footer { background: #2b1620; color: #ecc6d5; padding: 44px 0 26px; text-align: center; }
+.footer .logo { justify-content: center; margin-bottom: 16px; color: var(--cor-branco); }
+.footer-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin: 16px 0; }
+.footer-links a { color: #ecc6d5; font-size: 0.9rem; }
+.footer-links a:hover { text-decoration: underline; }
+.footer .copy { font-size: 0.85rem; opacity: .8; margin-top: 12px; }
+.footer .creditos { font-size: 0.75rem; opacity: .6; margin-top: 8px; }
+
+/* ============================================================
+   BARRA FLUTUANTE DE COMPRA (MOBILE)
+============================================================ */
+.flutuante {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--cor-branco);
+  border-top: 1px solid #f3d9e2;
+  padding: 12px 16px;
+  display: none;
+  justify-content: space-between; align-items: center; gap: 14px;
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.08);
+  z-index: 90;
+}
+.flutuante .f-preco b { font-family: 'Playfair Display', serif; color: var(--cor-primaria); font-size: 1.4rem; }
+.flutuante .f-preco small { display: block; color: var(--cor-texto-claro); font-size: 0.75rem; }
+.flutuante .btn { padding: 12px 22px; font-size: 0.95rem; flex-shrink: 0; }
+
+@media (min-width: 768px) {
+  .flutuante { display: none !important; }
+}
+@media (max-width: 767px) {
+  .flutuante { display: flex; }
+  body { padding-bottom: 78px; }
+}
+
+/* ============================================================
+   RESPONSIVO
+============================================================ */
+@media (max-width: 900px) {
+  .hero .container { grid-template-columns: 1fr; }
+  .hero-img { max-width: 420px; margin: 0 auto; }
+  .modulos-grid, .depoimentos { grid-template-columns: 1fr; }
+  .quem-grid { grid-template-columns: 1fr; }
+  .sobre-grid { grid-template-columns: 1fr; }
+  .secao { padding: 60px 0; }
+  .header-cta .btn-header { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container">
+    <a class="logo" href="#inicio">
+      ❀ Betania Picolloto
+      <span class="logo-marca">Penteadista</span>
+    </a>
+    <div class="header-cta">
+      <a class="btn btn-comprar btn-header btn-compra" href="#oferta">Quero participar</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-texto">
+      <span class="hero-badge">✦ 100% Online · Aula em vídeo</span>
+      <h1>Do zero à trança <span>perfeita</span> na cabeça das suas clientes.</h1>
+      <p class="hero-sub">Aprenda o passo a passo completo de uma trança profissional, com técnicas de preparo, execução e acabamento — mesmo que você nunca tenha feito uma trança antes.</p>
+
+      <ul class="hero-bullets">
+        <li>Aula completa em vídeo com passo a passo detalhado</li>
+        <li>Técnicas profissionais usadas no dia a dia da pentiadista</li>
+        <li>Dicas de fixação, preparação e acabamento impecável</li>
+        <li>Acesso por 3 meses para assistir quantas vezes quiser</li>
+      </ul>
+
+      <div class="hero-preco">
+        <span class="preco-antigo">R$ 99,00</span>
+        <span class="preco-atual">R$ 49,99</span>
+        <span class="preco-acesso">pagamento único · acesso por 3 meses</span>
+      </div>
+
+      <a class="btn btn-comprar btn-compra" href="#oferta">Quero participar por apenas R$ 49,99</a>
+    </div>
+
+    <div class="hero-img">
+      <!-- TROQUE AQUI PELA FOTO DA SUA ESPOSA / UMA TRANÇA PRONTA -->
+      <img class="img-principal" src="tranca.jpg.jpeg" alt="Trança profissional feita pela Betania Picolloto">
+      <div class="selo"><b>3</b> meses<br>de acesso</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTADOR ================= -->
+<section class="contador-secao">
+  <div class="container">
+    <div class="contador-titulo">Oferta de lançamento termina em:</div>
+    <div class="contador-numeros" id="contador">
+      <div class="contador-item"><b id="c-dias">00</b><span>dias</span></div>
+      <div class="contador-item"><b id="c-horas">00</b><span>horas</span></div>
+      <div class="contador-item"><b id="c-min">00</b><span>min</span></div>
+      <div class="contador-item"><b id="c-seg">00</b><span>seg</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VÍDEO ================= -->
+<section class="secao fundo-branco">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="etiqueta">Conheça o curso</span>
+      <h2>Assista a <span>prévia da aula</span> e veja o que você vai aprender</h2>
+      <p>Um vídeo rápido mostrando a técnica da trança que você vai dominar.</p>
+    </div>
+
+    <!-- ============================================================
+         COLOQUE AQUI O SEU VÍDEO:
+         Substitua todo o <div class="video-placeholder">...</div>
+         pelo código abaixo:
+         <iframe width="100%" height="100%"
+           src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO"
+           frameborder="0" allowfullscreen
+           style="position:absolute; top:0; left:0; width:100%; height:100%;">
+         </iframe>
+    ============================================================ -->
+    <div class="video-wrapper">
+      <div class="video-placeholder">
+        <div class="play">▶</div>
+        <p>Espaço reservado para o vídeo da aula</p>
+        <small>Envie o link do YouTube/Vimeo para ativar</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÓDULOS / O QUE VAI APRENDER ================= -->
+<section class="secao fundo-rosa">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="etiqueta">Conteúdo do curso</span>
+      <h2>O que você vai <span>aprender</span> na aula</h2>
+      <p>Conteúdo direto ao ponto, sem enrolação, para você aplicar no mesmo dia.</p>
+    </div>
+
+    <div class="modulos-grid">
+      <div class="modulo">
+        <span class="num">Etapa 01</span>
+        <h3>Preparo e estrutura</h3>
+        <p>Base perfeita para uma trança firme, alinhada e que dura o dia inteiro.</p>
+        <ul>
+          <li>Preparação correta do cabelo antes de trançar</li>
+          <li>Divisão de mechas proporcional e alinhada</li>
+          <li>Escolha dos produtos e utensílios certos</li>
+        </ul>
+      </div>
+
+      <div class="modulo">
+        <span class="num">Etapa 02</span>
+        <h3>Técnica da trança passo a passo</h3>
+        <p>A execução completa da trança, ensinada de forma simples e didática.</p>
+        <ul>
+          <li>Posição correta das mãos e do corpo</li>
+          <li>Passo a passo da trança embutida na raiz</li>
+          <li>Manutenção da tensão para um acabamento uniforme</li>
+        </ul>
+      </div>
+
+      <div class="modulo">
+        <span class="num">Etapa 03</span>
+        <h3>Acabamento profissional</h3>
+        <p>Os detalhes que transformam uma trança simples em um trabalho profissional.</p>
+        <ul>
+          <li>Finalização e fixação duradoura</li>
+          <li>Correções de falhas e imperfeições</li>
+          <li>Acabamento final com visual de salão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARA QUEM É ================= -->
+<section class="secao fundo-branco">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="etiqueta">Público</span>
+      <h2>Para quem é este <span>curso?</span></h2>
+      <p>Se você se identificou com alguma dessas situações, esse curso foi feito para você.</p>
+    </div>
+
+    <div class="quem-grid">
+      <div class="quem-card">
+        <h3>Iniciante</h3>
+        <ul>
+          <li>Nunca fez uma trança e quer aprender do zero</li>
+          <li>Busca um passo a passo simples e didático</li>
+          <li>Quer conquistar as primeiras clientes</li>
+          <li>Procura segurança para cobrar pelo serviço</li>
+        </ul>
+      </div>
+      <div class="quem-card">
+        <h3>Penteadista em evolução</h3>
+        <ul>
+          <li>Já faz tranças, mas quer deixá-las mais profissionais</li>
+          <li>Quer melhorar a durabilidade e o acabamento</li>
+          <li>Busca técnicas que otimizam o tempo de atendimento</li>
+          <li>Quer agregar valor e aumentar seus preços</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE A MENTORA ================= -->
+<section class="secao fundo-rosa">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-foto">
+        <!-- TROQUE AQUI PELA FOTO DA SUA ESPOSA -->
+        <img src="tranca.jpg.jpeg" alt="Betania Picolloto, penteadista">
+      </div>
+      <div class="sobre-texto">
+        <div class="secao-titulo" style="text-align:left; margin-bottom:16px;">
+          <span class="etiqueta">Sua mentora</span>
+          <h2>Conheça a <span>Betania Picolloto</span></h2>
+        </div>
+        <p>Penteadista apaixonada pela arte de transformar cabelos. Especializada em tranças e penteados, Betania une técnica e sensibilidade para criar trabalhos que encantam e duram.</p>
+        <ul class="sobre-lista">
+          <li>Penteadista especializada em tranças</li>
+          <li>Anos de experiência com clientes reais</li>
+          <li>Trabalhos feitos com capricho e acabamento profissional</li>
+          <li>Ensina com didática simples, passo a passo</li>
+        </ul>
+        <p class="sobre-cita">"Trança bem feita é técnica + carinho. Eu te mostro o caminho, passo a passo, para você também transformar cabelos em arte."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPOIMENTOS ================= -->
+<section class="secao fundo-branco">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="etiqueta">Prova social</span>
+      <h2>Quem já fez <span>amou</span></h2>
+      <p>Resultados reais de quem colocou a técnica em prática.</p>
+    </div>
+
+    <div class="depoimentos">
+      <div class="depoimento">
+        <div class="estrelas">★★★★★</div>
+        <p>"Amei o curso! Em poucos dias já consegui fazer uma trança linda na minha filha. A didática é maravilhosa."</p>
+        <div class="autor">
+          <div class="avatar">M</div>
+          <div><b>Maria S.</b><span>Aluna do curso</span></div>
+        </div>
+      </div>
+      <div class="depoimento">
+        <div class="estrelas">★★★★★</div>
+        <p>"Sou penteadista há 1 ano e esse curso elevou o nível dos meus acabamentos. Valeu cada centavo."</p>
+        <div class="autor">
+          <div class="avatar">J</div>
+          <div><b>Juliana P.</b><span>Penteadista</span></div>
+        </div>
+      </div>
+      <div class="depoimento">
+        <div class="estrelas">★★★★★</div>
+        <p>"Nunca tinha trançado na vida. O passo a passo é tão simples que consegui acompanhar na primeira aula."</p>
+        <div class="autor">
+          <div class="avatar">A</div>
+          <div><b>Ana R.</b><span>Aluna do curso</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFERTA ================= -->
+<section class="secao fundo-rosa oferta" id="oferta">
+  <div class="container">
+    <div class="oferta-card">
+      <div class="selo-garantia"><b>7</b> dias de garantia</div>
+      <h2>Garanta seu acesso agora por <span>R$ 49,99</span></h2>
+      <p style="color:var(--cor-texto-claro);">Pagamento único. Sem mensalidade. Acesso por <b>3 meses</b>.</p>
+
+      <ul class="oferta-lista">
+        <li>Aula em vídeo com passo a passo da trança profissional</li>
+        <li>Material de apoio e dicas exclusivas</li>
+        <li>Acesso por 3 meses na plataforma</li>
+        <li>Garantia incondicional de 7 dias</li>
+        <li>Acesso imediato após a confirmação do pagamento</li>
+      </ul>
+
+      <div class="oferta-preco">
+        <span class="antigo">de R$ 99,00</span><br>
+        <span class="atual">R$ 49,99</span>
+        <div class="acesso">à vista ou em até 12x no cartão</div>
+      </div>
+
+      <!-- ============================================================
+           COLE AQUI O SEU LINK DE CHECKOUT DO HOTMART:
+           Substitua o # pelo link real, ex:
+           href="https://pay.hotmart.com/SEU_CODIGO"
+      ============================================================ -->
+      <a class="btn btn-comprar btn-compra" href="#"
+         data-hotmart="https://pay.hotmart.com/COLE_AQUI_SEU_LINK" id="btn-final">
+        Quero participar por R$ 49,99
+      </a>
+
+      <div class="oferta-pagamentos">
+        <span>💳 Cartão de crédito</span>
+        <span>🏦 Pix</span>
+        <span>🔒 Compra segura</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="secao fundo-branco">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="etiqueta">Dúvidas</span>
+      <h2>Perguntas <span>frequentes</span></h2>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-pergunta">Preciso ter experiência para participar?</button>
+        <div class="faq-resposta"><p>Não! O curso foi estruturado para guiar você por todo o processo, do preparo ao acabamento, independente do seu nível atual.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta">Como recebo o acesso?</button>
+        <div class="faq-resposta"><p>Após a confirmação do pagamento, você receberá um e-mail com todas as instruções de acesso à plataforma onde acontece a aula.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta">Por quanto tempo tenho acesso?</button>
+        <div class="faq-resposta"><p>Você terá acesso completo por 3 meses, podendo assistir a aula quantas vezes quiser dentro desse período.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta">Qual a política de reembolso?</button>
+        <div class="faq-resposta"><p>Você pode solicitar o reembolso total em até 7 dias após a compra, direto pela plataforma Hotmart, sem burocracia.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-pergunta">Como faço para pagar?</button>
+        <div class="faq-resposta"><p>O pagamento é feito diretamente pelo checkout seguro da Hotmart, com cartão de crédito (em até 12x) ou Pix. Seus dados estão totalmente protegidos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <a class="logo" href="#inicio">❀ Betania Picolloto</a>
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a>
+      <a href="#">Política de Privacidade</a>
+      <a href="https://www.instagram.com/p/DcKFzcyPzXM/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <div class="copy">© <span id="ano"></span> Betania Picolloto · Todos os direitos reservados</div>
+    <div class="creditos">Este produto não garante a obtenção de resultados. Resultados podem variar de pessoa para pessoa.</div>
+  </div>
+</footer>
+
+<!-- ================= BARRA FLUTUANTE MOBILE ================= -->
+<div class="flutuante">
+  <div class="f-preco">
+    <b>R$ 49,99</b>
+    <small>3 meses de acesso</small>
+  </div>
+  <a class="btn btn-comprar btn-compra" href="#oferta">Quero participar</a>
+</div>
+
+<script>
+// ---------- Contador regressivo (7 dias a partir de hoje) ----------
+(function () {
+  var fim = new Date();
+  fim.setDate(fim.getDate() + 7);
+  fim.setHours(23, 59, 59, 999);
+
+  function atualizar() {
+    var agora = new Date().getTime();
+    var dif = fim - agora;
+    if (dif < 0) dif = 0;
+    var dias  = Math.floor(dif / (1000 * 60 * 60 * 24));
+    var horas = Math.floor((dif % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var min   = Math.floor((dif % (1000 * 60 * 60)) / (1000 * 60));
+    var seg   = Math.floor((dif % (1000 * 60)) / 1000);
+    function p(n) { return String(n).padStart(2, "0"); }
+    document.getElementById("c-dias").textContent  = p(dias);
+    document.getElementById("c-horas").textContent = p(horas);
+    document.getElementById("c-min").textContent   = p(min);
+    document.getElementById("c-seg").textContent   = p(seg);
+  }
+  atualizar();
+  setInterval(atualizar, 1000);
+})();
+
+// ---------- FAQ (acordeão) ----------
+document.querySelectorAll(".faq-item").forEach(function (item) {
+  item.querySelector(".faq-pergunta").addEventListener("click", function () {
+    var aberto = item.classList.contains("aberto");
+    document.querySelectorAll(".faq-item.aberto").forEach(function (o) {
+      o.classList.remove("aberto");
+      o.querySelector(".faq-resposta").style.maxHeight = null;
+    });
+    if (!aberto) {
+      item.classList.add("aberto");
+      var r = item.querySelector(".faq-resposta");
+      r.style.maxHeight = r.scrollHeight + "px";
+    }
+  });
+});
+
+// ---------- Botão de compra (Hotmart) ----------
+// Quando você colar o link do Hotmart no href do botão #btn-final,
+// todos os outros botões "Quero participar" levarão até a oferta.
+// Para direcionar TODOS direto para o checkout, troque os hrefs "#oferta"
+// pelo seu link real do Hotmart.
+document.querySelectorAll(".btn-compra").forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    var final = document.getElementById("btn-final");
+    var link  = final ? final.getAttribute("data-hotmart") : "";
+    if (link && link.indexOf("COLE_AQUI") === -1) {
+      e.preventDefault();
+      window.location.href = link;
+    }
+    // Se o link ainda não foi preenchido, deixa o comportamento padrão
+    // (rolar até a seção de oferta).
+  });
+});
+
+// ---------- Ano do rodapé ----------
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
